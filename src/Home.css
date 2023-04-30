@@ -1,0 +1,80 @@
+/* .home{
+
+} */
+.home_map{
+     display: flex;
+     flex-direction: row;
+}
+
+.login_form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+}
+.login_form > input{
+     width: 25rem;
+     height: 3rem;
+     font-size: 2rem;
+     outline: none;
+     border-top-style: hidden;
+     border-right-style: hidden;
+     border-left-style: hidden;
+     border-bottom-style: groove;
+     background-color: rgba(238, 238, 238, 0.555);
+     font-family: 'Lora', serif;
+     font-style: bold;
+     font-weight: 700;
+     padding: 0.2rem 1rem;
+     margin: 1rem 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.login_form > button{
+     width: 8rem;
+     height: 2rem;
+     background-color: #2C2F3A;
+     border: none;
+     outline: none;
+     margin: 2rem;
+     color: white;
+     font-family: 'Lora', serif;
+     font-style: bold;
+     font-weight: 500;
+     font-size: 1.2rem;
+     border-radius: 2rem;
+     cursor: pointer;
+}
+
+.map-container {
+     width: 50%;
+     height: 500px;
+     margin: 1rem;
+}
+
+.sourceAddDetails{
+    position: absolute;
+    background-color: #2C2F3A;
+    color: white;
+    width: 25rem;
+    top: 279px;
+}
+.sourceAddDetailsBlock{
+     padding-top: 0.3rem;
+     padding-bottom: 0.3rem;
+     padding-left: 0.3rem;
+     border-bottom: 0.1rem solid white;
+     cursor: pointer;
+}
+
+.destinationAddDetails{
+     position: absolute;
+     background-color: #2C2F3A;
+     color: white;
+     width: 25rem;
+     top: 367px;
+}

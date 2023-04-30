@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Home.js";
+import Header from './Header';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function App() {
+
+  const[open,setOpen] = useState(false);
+
+  const openCloseMenu = () => {
+    setOpen(!open);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {
+        (window.innerWidth>600)?(
+          <Header/>
+        ):(
+          <div className="headerBg">
+            {open===true? (
+              <div>
+                <MenuIcon style={{color:"white", margin:"0.5rem"}} onClick={openCloseMenu}/>
+                <Header/>
+              </div>
+            ) : (
+              <MenuIcon style={{color:"white", margin:"0.5rem"}} onClick={openCloseMenu}/>
+            )}
+          </div>
+        )
+      }
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+    </Router>
   );
 }
 
